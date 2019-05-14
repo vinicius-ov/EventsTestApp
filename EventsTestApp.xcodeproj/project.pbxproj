@@ -16,7 +16,6 @@
 		F276046D228B37C100232773 /* EventsTestAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276046C228B37C100232773 /* EventsTestAppUITests.swift */; };
 		F276047B228B3A1800232773 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276047A228B3A1800232773 /* RootViewController.swift */; };
 		F276047D228B3AB800232773 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276047C228B3AB800232773 /* CoordinatorProtocol.swift */; };
-		F2760480228B3BE400232773 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276047F228B3BE400232773 /* HomeCoordinator.swift */; };
 		F2760483228B3EBB00232773 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2760482228B3EBB00232773 /* HomeViewModel.swift */; };
 		F2760485228B400200232773 /* EventsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2760484228B400200232773 /* EventsService.swift */; };
 		F2760487228B40A000232773 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2760486228B40A000232773 /* Event.swift */; };
@@ -63,7 +62,6 @@
 		F276046E228B37C100232773 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F276047A228B3A1800232773 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RootViewController.swift; path = ../RootViewController.swift; sourceTree = "<group>"; };
 		F276047C228B3AB800232773 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoordinatorProtocol.swift; path = ../CoordinatorProtocol.swift; sourceTree = "<group>"; };
-		F276047F228B3BE400232773 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		F2760482228B3EBB00232773 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		F2760484228B400200232773 /* EventsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsService.swift; sourceTree = "<group>"; };
 		F2760486228B40A000232773 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -135,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				F276044C228B37BC00232773 /* AppDelegate.swift */,
+				F2760486228B40A000232773 /* Event.swift */,
 				F276048C228B53CD00232773 /* Service */,
 				F2760481228B3BEB00232773 /* Home */,
 				F2760450228B37BC00232773 /* Main.storyboard */,
@@ -177,10 +176,8 @@
 			isa = PBXGroup;
 			children = (
 				F276044E228B37BC00232773 /* HomeViewController.swift */,
-				F276047F228B3BE400232773 /* HomeCoordinator.swift */,
 				F2760482228B3EBB00232773 /* HomeViewModel.swift */,
 				F2760484228B400200232773 /* EventsService.swift */,
-				F2760486228B40A000232773 /* Event.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -376,7 +373,6 @@
 				F276047D228B3AB800232773 /* CoordinatorProtocol.swift in Sources */,
 				F2760483228B3EBB00232773 /* HomeViewModel.swift in Sources */,
 				F276044F228B37BC00232773 /* HomeViewController.swift in Sources */,
-				F2760480228B3BE400232773 /* HomeCoordinator.swift in Sources */,
 				F276044D228B37BC00232773 /* AppDelegate.swift in Sources */,
 				F276047B228B3A1800232773 /* RootViewController.swift in Sources */,
 				F2760489228B4A9000232773 /* ApiRequestDelegate.swift in Sources */,

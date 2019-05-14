@@ -14,12 +14,12 @@ protocol HomeNavigationDelegate: AnyObject {
 
 protocol HomeViewModelDelegate: class {
     var loading: Bool { get }
+    var events: [Event] { get }
 }
-    
+
 final class HomeViewModel {
-
-    private var eventsService: EventsServiceDelegate
-
+    
+    var eventsService: EventsServiceDelegate
     
     init(eventsService: EventsServiceDelegate = EventsService()) {
         self.eventsService = eventsService

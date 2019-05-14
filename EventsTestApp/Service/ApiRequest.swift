@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import Alamofire
 
 class ApiRequest: ApiRequestDelegate {
     
     func request(withUrl url: String, andParameters params: ParametersApiRequest?, andCompletion completion: @escaping ApiRequestCompletion) {
-        completion(nil,nil)
+        Alamofire.request(url,method: .get)
+        .validate()
+            .responseJSON { (response: DataResponse) in
+                completion(response.data, response.result.error)
+        }
     }
     
 

@@ -10,7 +10,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    var homeViewModel: HomeViewModelDelegate?
+    var homeViewModel: HomeViewModel?
     
     public static func initiate(viewModel: HomeViewModelDelegate? = nil) -> HomeViewController {
         let main = UIStoryboard(name: "Main", bundle: nil)
@@ -18,15 +18,20 @@ class HomeViewController: UIViewController {
             as? HomeViewController else {
                 fatalError()
         }
-        viewController.homeViewModel = viewModel
         return viewController
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        homeViewModel = HomeViewModel.init(eventsService: EventsService())
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        homeViewModel?.eventsService.fetchEvents { events in
+            
+        }
     }
 
 
 }
-

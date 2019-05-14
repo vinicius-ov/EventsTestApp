@@ -23,8 +23,6 @@
 		F2760489228B4A9000232773 /* ApiRequestDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2760488228B4A9000232773 /* ApiRequestDelegate.swift */; };
 		F276048B228B4CA600232773 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276048A228B4CA600232773 /* ApiRequest.swift */; };
 		F276048E228B578800232773 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = F276048D228B578800232773 /* Cartfile */; };
-		F2760497228B5A2200232773 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2760490228B5A2100232773 /* RxBlocking.framework */; };
-		F2760498228B5A2200232773 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2760491228B5A2100232773 /* RxTest.framework */; };
 		F2760499228B5A2200232773 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2760492228B5A2100232773 /* RxRelay.framework */; };
 		F276049A228B5A2200232773 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2760493228B5A2100232773 /* RxCocoa.framework */; };
 		F276049B228B5A2200232773 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2760494228B5A2100232773 /* Alamofire.framework */; };
@@ -86,8 +84,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2760497228B5A2200232773 /* RxBlocking.framework in Frameworks */,
-				F2760498228B5A2200232773 /* RxTest.framework in Frameworks */,
 				F2760499228B5A2200232773 /* RxRelay.framework in Frameworks */,
 				F276049A228B5A2200232773 /* RxCocoa.framework in Frameworks */,
 				F276049B228B5A2200232773 /* Alamofire.framework in Frameworks */,
@@ -354,8 +350,6 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxRelay.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxTest.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
@@ -366,8 +360,6 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxRelay.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxBlocking.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxTest.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

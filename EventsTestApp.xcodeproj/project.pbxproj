@@ -27,6 +27,8 @@
 		F276049B228B5A2200232773 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2760494228B5A2100232773 /* Alamofire.framework */; };
 		F276049C228B5A2200232773 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2760495228B5A2200232773 /* RxSwift.framework */; };
 		F276049D228B5A2200232773 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2760496228B5A2200232773 /* AlamofireImage.framework */; };
+		F27604A1228CC01B00232773 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27604A0228CC01A00232773 /* People.swift */; };
+		F27604A4228CC44700232773 /* Cupom.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27604A3228CC44700232773 /* Cupom.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		F2760494228B5A2100232773 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		F2760495228B5A2200232773 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		F2760496228B5A2200232773 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
+		F27604A0228CC01A00232773 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
+		F27604A3228CC44700232773 /* Cupom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cupom.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				F276044C228B37BC00232773 /* AppDelegate.swift */,
-				F2760486228B40A000232773 /* Event.swift */,
+				F27604A2228CC3DD00232773 /* Model */,
 				F276048C228B53CD00232773 /* Service */,
 				F2760481228B3BEB00232773 /* Home */,
 				F2760450228B37BC00232773 /* Main.storyboard */,
@@ -203,6 +207,16 @@
 				F2760491228B5A2100232773 /* RxTest.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F27604A2228CC3DD00232773 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F2760486228B40A000232773 /* Event.swift */,
+				F27604A3228CC44700232773 /* Cupom.swift */,
+				F27604A0228CC01A00232773 /* People.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,11 +387,13 @@
 				F276047D228B3AB800232773 /* CoordinatorProtocol.swift in Sources */,
 				F2760483228B3EBB00232773 /* HomeViewModel.swift in Sources */,
 				F276044F228B37BC00232773 /* HomeViewController.swift in Sources */,
+				F27604A1228CC01B00232773 /* People.swift in Sources */,
 				F276044D228B37BC00232773 /* AppDelegate.swift in Sources */,
 				F276047B228B3A1800232773 /* RootViewController.swift in Sources */,
 				F2760489228B4A9000232773 /* ApiRequestDelegate.swift in Sources */,
 				F276048B228B4CA600232773 /* ApiRequest.swift in Sources */,
 				F2760485228B400200232773 /* EventsService.swift in Sources */,
+				F27604A4228CC44700232773 /* Cupom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

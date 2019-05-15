@@ -26,7 +26,11 @@ final class EventsService {
 extension EventsService: EventsServiceDelegate {
     func fetchEvents(completion: @escaping CompletionEvents) {
         delegate?.request(withUrl: "http://5b840ba5db24a100142dcd8c.mockapi.io/api/events", andParameters: [:], andCompletion: { (data, error) in
-            debugPrint(data)
+                guard let jsonData = data, let events = try? JSONDecoder().decode([Event].self, from: jsonData) else{
+                    completion(ApiResult.failure(ResultError.data(message: "Falha no decode")))
+                    return 
+                }
+                completion(ApiResult.success(events))
         })
     }
 }

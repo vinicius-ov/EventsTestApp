@@ -48,7 +48,16 @@ extension HomeViewController: UITableViewDataSource{
 
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            //goto next view
+            homeViewModel?.selectedEvent = homeViewModel?.events[indexPath.row]
         performSegue(withIdentifier: "gotoEventDetails", sender: self)
+    }
+}
+
+extension HomeViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let vc = segue.destination as? DetailsViewController, let event = homeViewModel?.selectedEvent else {
+            return
+        }
+        vc.event = event
     }
 }

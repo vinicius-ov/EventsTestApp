@@ -18,6 +18,7 @@ final class HomeViewModel {
     var eventsService: EventsServiceDelegate
     var events: [Event] = []
     var error: String = ""
+    var selectedEvent: Event?
     
     init(eventsService: EventsServiceDelegate = EventsService()) {
         self.eventsService = eventsService

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class DetailsViewController: UIViewController {
 
@@ -14,12 +15,17 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var attendantsCollectionView: UICollectionView!
     
     var detailsViewModel: DetailsViewModel?
+    var event: Event!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         detailsViewModel = DetailsViewModel.init(checkinService: CheckinService())
         NotificationCenter.default.addObserver(self, selector: #selector(self.reloadCollectionView), name: NSNotification.Name(rawValue: "updateAttendees"), object: nil)
+        
+        let placeholder = UIImage(named: "mentha-logo")
+        eventImage.af_setImage(withURL: URL(string: event.imageUrl!)!, placeholderImage: placeholder)
+        
     }
     
     @IBAction func showShareSheet(_ sender: Any) {

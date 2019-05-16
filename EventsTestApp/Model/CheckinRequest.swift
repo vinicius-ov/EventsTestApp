@@ -21,8 +21,16 @@ class CheckinRequest: Codable {
     }
     
     init() {
+        //TODO: all parameter constr
         eventId = "1"
         name = "ss"
         email = "@"
+    }
+    
+    func toDictionary() -> [String:Any]? {
+        let parametersData = try? JSONEncoder().encode(self)
+        //TODO:guard here
+        let parameters = try? JSONSerialization.jsonObject(with: parametersData!, options: .allowFragments) as? [String:Any]
+        return parameters
     }
 }

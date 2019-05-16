@@ -41,7 +41,6 @@ extension HomeViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell") as! EventHomeTableViewCell
         cell.event = homeViewModel?.events[indexPath.row]
-        print(homeViewModel?.events[indexPath.row].date)
         tableView.deselectRow(at: indexPath, animated: true)
         return cell
     }

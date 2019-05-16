@@ -13,12 +13,13 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var eventImage: UIImageView!
     @IBOutlet weak var attendantsCollectionView: UICollectionView!
     
-    
+    var detailsViewModel: DetailsViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        detailsViewModel = DetailsViewModel.init(checkinService: CheckinService())
+        NotificationCenter.default.addObserver(self, selector: #selector(self.reloadCollectionView), name: NSNotification.Name(rawValue: "updateAttendees"), object: nil)
     }
     
     @IBAction func showShareSheet(_ sender: Any) {
@@ -29,5 +30,10 @@ class DetailsViewController: UIViewController {
     }
     
     @IBAction func performCheckin(_ sender: Any) {
+        detailsViewModel?.sendCheckin(checkinRequest: CheckinRequest())
+    }
+    
+    @objc func reloadCollectionView(){
+        print("update collection view \(detailsViewModel?.response) \(detailsViewModel?.error)")
     }
 }

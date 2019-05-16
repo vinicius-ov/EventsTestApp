@@ -33,6 +33,8 @@
 		F27604A9228CFAB800232773 /* EventHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27604A8228CFAB800232773 /* EventHomeTableViewCell.swift */; };
 		F27604AB228D140300232773 /* CheckinService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27604AA228D140300232773 /* CheckinService.swift */; };
 		F27604AD228D157400232773 /* CheckinRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27604AC228D157400232773 /* CheckinRequest.swift */; };
+		F27604AF228D1DF100232773 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27604AE228D1DF100232773 /* DetailsViewModel.swift */; };
+		F27604B2228D267400232773 /* CheckinResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27604B1228D267400232773 /* CheckinResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,8 @@
 		F27604A8228CFAB800232773 /* EventHomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHomeTableViewCell.swift; sourceTree = "<group>"; };
 		F27604AA228D140300232773 /* CheckinService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinService.swift; sourceTree = "<group>"; };
 		F27604AC228D157400232773 /* CheckinRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinRequest.swift; sourceTree = "<group>"; };
+		F27604AE228D1DF100232773 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		F27604B1228D267400232773 /* CheckinResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +230,7 @@
 				F27604A3228CC44700232773 /* Cupom.swift */,
 				F27604A0228CC01A00232773 /* People.swift */,
 				F27604AC228D157400232773 /* CheckinRequest.swift */,
+				F27604B1228D267400232773 /* CheckinResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -234,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				F27604A5228CF7E700232773 /* DetailsViewController.swift */,
+				F27604AE228D1DF100232773 /* DetailsViewModel.swift */,
 				F27604AA228D140300232773 /* CheckinService.swift */,
 			);
 			path = Details;
@@ -250,6 +256,7 @@
 				F2760446228B37BC00232773 /* Frameworks */,
 				F2760447228B37BC00232773 /* Resources */,
 				F276049E228B5A4A00232773 /* Carthage */,
+				F27604B0228D1FFF00232773 /* TODO/FIXME */,
 			);
 			buildRules = (
 			);
@@ -396,6 +403,24 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
+		F27604B0228D1FFF00232773 /* TODO/FIXME */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = TODO/FIXME;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "TAGS=\"TODO:|FIXME:\"\necho \"searching ${SRCROOT} for ${TAGS}\"\nfind \"${SRCROOT}\" \\( -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -406,9 +431,11 @@
 				F2760487228B40A000232773 /* Event.swift in Sources */,
 				F276047D228B3AB800232773 /* CoordinatorProtocol.swift in Sources */,
 				F2760483228B3EBB00232773 /* HomeViewModel.swift in Sources */,
+				F27604AF228D1DF100232773 /* DetailsViewModel.swift in Sources */,
 				F276044F228B37BC00232773 /* HomeViewController.swift in Sources */,
 				F27604A1228CC01B00232773 /* People.swift in Sources */,
 				F276044D228B37BC00232773 /* AppDelegate.swift in Sources */,
+				F27604B2228D267400232773 /* CheckinResponse.swift in Sources */,
 				F27604AD228D157400232773 /* CheckinRequest.swift in Sources */,
 				F276047B228B3A1800232773 /* RootViewController.swift in Sources */,
 				F2760489228B4A9000232773 /* ApiRequestDelegate.swift in Sources */,

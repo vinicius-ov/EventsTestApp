@@ -17,7 +17,7 @@ class Event: Codable {
     var longitude: Double?
     var imageUrl: String?
     var description: String?
-    var date: Int?
+    var date: Double?
     var people: [People]?
     var cupons: [Cupom]?
     

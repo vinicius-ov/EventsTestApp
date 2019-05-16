@@ -25,7 +25,8 @@ protocol ApiRequestDelegate: AnyObject {
     typealias ApiRequestCompletion = ((Data?, Error?) -> Void)
     
     func request(withUrl url: String,
+                 andCompletion completion: @escaping ApiRequestCompletion)
+    func sendRequest(withUrl url: String,
                  andParameters params: ParametersApiRequest?,
                  andCompletion completion: @escaping ApiRequestCompletion)
-    
 }

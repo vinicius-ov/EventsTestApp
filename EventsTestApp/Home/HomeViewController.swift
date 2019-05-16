@@ -39,13 +39,17 @@ extension HomeViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell")
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell") as! EventHomeTableViewCell
+        cell.event = homeViewModel?.events[indexPath.row]
+        print(homeViewModel?.events[indexPath.row].date)
+        tableView.deselectRow(at: indexPath, animated: true)
+        return cell
     }
 }
 
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             //goto next view
+        performSegue(withIdentifier: "gotoEventDetails", sender: self)
     }
 }

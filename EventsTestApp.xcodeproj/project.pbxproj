@@ -29,6 +29,10 @@
 		F276049D228B5A2200232773 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2760496228B5A2200232773 /* AlamofireImage.framework */; };
 		F27604A1228CC01B00232773 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27604A0228CC01A00232773 /* People.swift */; };
 		F27604A4228CC44700232773 /* Cupom.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27604A3228CC44700232773 /* Cupom.swift */; };
+		F27604A6228CF7E700232773 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27604A5228CF7E700232773 /* DetailsViewController.swift */; };
+		F27604A9228CFAB800232773 /* EventHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27604A8228CFAB800232773 /* EventHomeTableViewCell.swift */; };
+		F27604AB228D140300232773 /* CheckinService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27604AA228D140300232773 /* CheckinService.swift */; };
+		F27604AD228D157400232773 /* CheckinRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27604AC228D157400232773 /* CheckinRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +83,10 @@
 		F2760496228B5A2200232773 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 		F27604A0228CC01A00232773 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
 		F27604A3228CC44700232773 /* Cupom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cupom.swift; sourceTree = "<group>"; };
+		F27604A5228CF7E700232773 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		F27604A8228CFAB800232773 /* EventHomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHomeTableViewCell.swift; sourceTree = "<group>"; };
+		F27604AA228D140300232773 /* CheckinService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinService.swift; sourceTree = "<group>"; };
+		F27604AC228D157400232773 /* CheckinRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +147,7 @@
 				F276044C228B37BC00232773 /* AppDelegate.swift */,
 				F27604A2228CC3DD00232773 /* Model */,
 				F276048C228B53CD00232773 /* Service */,
+				F27604A7228CF81600232773 /* Details */,
 				F2760481228B3BEB00232773 /* Home */,
 				F2760450228B37BC00232773 /* Main.storyboard */,
 				F2760453228B37C100232773 /* Assets.xcassets */,
@@ -182,6 +191,7 @@
 				F276044E228B37BC00232773 /* HomeViewController.swift */,
 				F2760482228B3EBB00232773 /* HomeViewModel.swift */,
 				F2760484228B400200232773 /* EventsService.swift */,
+				F27604A8228CFAB800232773 /* EventHomeTableViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -215,8 +225,18 @@
 				F2760486228B40A000232773 /* Event.swift */,
 				F27604A3228CC44700232773 /* Cupom.swift */,
 				F27604A0228CC01A00232773 /* People.swift */,
+				F27604AC228D157400232773 /* CheckinRequest.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F27604A7228CF81600232773 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				F27604A5228CF7E700232773 /* DetailsViewController.swift */,
+				F27604AA228D140300232773 /* CheckinService.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,11 +409,15 @@
 				F276044F228B37BC00232773 /* HomeViewController.swift in Sources */,
 				F27604A1228CC01B00232773 /* People.swift in Sources */,
 				F276044D228B37BC00232773 /* AppDelegate.swift in Sources */,
+				F27604AD228D157400232773 /* CheckinRequest.swift in Sources */,
 				F276047B228B3A1800232773 /* RootViewController.swift in Sources */,
 				F2760489228B4A9000232773 /* ApiRequestDelegate.swift in Sources */,
+				F27604A9228CFAB800232773 /* EventHomeTableViewCell.swift in Sources */,
 				F276048B228B4CA600232773 /* ApiRequest.swift in Sources */,
 				F2760485228B400200232773 /* EventsService.swift in Sources */,
+				F27604AB228D140300232773 /* CheckinService.swift in Sources */,
 				F27604A4228CC44700232773 /* Cupom.swift in Sources */,
+				F27604A6228CF7E700232773 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

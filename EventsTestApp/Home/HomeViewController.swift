@@ -12,26 +12,40 @@ class HomeViewController: UIViewController {
 
     var homeViewModel: HomeViewModel?
     
-    public static func initiate(viewModel: HomeViewModelDelegate? = nil) -> HomeViewController {
-        let main = UIStoryboard(name: "Main", bundle: nil)
-        guard let viewController = main.instantiateViewController(withIdentifier: "HomeMapViewController")
-            as? HomeViewController else {
-                fatalError()
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            tableView.delegate = self
+            tableView.dataSource = self
         }
-        return viewController
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         homeViewModel = HomeViewModel.init(eventsService: EventsService())
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.reloadTable), name: NSNotification.Name(rawValue: "reloadTable"), object: nil)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        homeViewModel?.eventsService.fetchEvents { events in
-            
-        }
+    @objc func reloadTable(){
+        self.tableView.reloadData()
     }
 
+}
 
+extension HomeViewController: UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return homeViewModel?.events.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell")
+        return UITableViewCell()
+    }
+}
+
+extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            //goto next view
+    }
 }

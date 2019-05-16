@@ -13,6 +13,11 @@ class DetailsViewController: UIViewController {
 
     @IBOutlet weak var eventImage: UIImageView!
     @IBOutlet weak var attendantsCollectionView: UICollectionView!
+    @IBOutlet weak var eventTitleLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var descriptionText: UITextView!
+    @IBOutlet weak var cuponsCollectionView: UICollectionView!
+    @IBOutlet weak var attendeesCollectionView: UICollectionView!
     
     var detailsViewModel: DetailsViewModel?
     var event: Event!
@@ -25,7 +30,18 @@ class DetailsViewController: UIViewController {
         
         let placeholder = UIImage(named: "mentha-logo")
         eventImage.af_setImage(withURL: URL(string: event.imageUrl!)!, placeholderImage: placeholder)
+        eventTitleLabel.text = event.title
+        guard let dateTimestamp = event.date else {
+            return
+        }
+        let date = Date(timeIntervalSince1970: dateTimestamp / 1000.0)
+        dateLabel.text = date.formattedDate()
+        descriptionText.text = event.description
         
+    }
+    
+    override func viewWillLayoutSubviews() {
+        descriptionText.setContentOffset(.zero, animated: false)
     }
     
     @IBAction func showShareSheet(_ sender: Any) {

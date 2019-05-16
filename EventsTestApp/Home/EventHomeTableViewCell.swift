@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class EventHomeTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var eventImage: UIImageView!
     @IBOutlet weak var eventTitleLabel: UILabel!
     
     @IBOutlet weak var eventDateLabel: UILabel!
@@ -21,6 +23,8 @@ class EventHomeTableViewCell: UITableViewCell {
             }
             let date = Date(timeIntervalSince1970: dateTimestamp / 1000.0)
             eventDateLabel.text = date.formattedDate()
+            let placeholder = UIImage(named: "mentha-logo")
+            eventImage.af_setImage(withURL: URL(string: event.imageUrl!)!, placeholderImage: placeholder)
         }
     }
     override func awakeFromNib() {
@@ -35,11 +39,11 @@ class EventHomeTableViewCell: UITableViewCell {
     }
     
 }
-
+//TODO: remove from here
 extension Date{
     func formattedDate() -> String{
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM/yyyy"
+        dateFormatter.dateFormat = "dd/MM/yyyy, EEEE"
         dateFormatter.locale = Locale(identifier:"pt-BR")
         return dateFormatter.string(from: self)
     }

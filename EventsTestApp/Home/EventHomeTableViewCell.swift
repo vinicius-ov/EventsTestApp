@@ -13,8 +13,9 @@ class EventHomeTableViewCell: UITableViewCell {
 
     @IBOutlet weak var eventImage: UIImageView!
     @IBOutlet weak var eventTitleLabel: UILabel!
-    
+    @IBOutlet weak var hourLabel: UILabel!
     @IBOutlet weak var eventDateLabel: UILabel!
+    
     var event: Event! {
         didSet {
             eventTitleLabel.text = event.title
@@ -23,6 +24,7 @@ class EventHomeTableViewCell: UITableViewCell {
             }
             let date = Date(timeIntervalSince1970: dateTimestamp / 1000.0)
             eventDateLabel.text = date.formattedDate()
+            hourLabel.text = date.formattedHour()
             let placeholder = UIImage(named: "mentha-logo")
             eventImage.af_setImage(withURL: URL(string: event.imageUrl!)!, placeholderImage: placeholder)
         }

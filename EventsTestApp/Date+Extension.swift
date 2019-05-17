@@ -18,7 +18,7 @@ extension Date{
     
     func formattedHour() -> String{
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "hh:mm"
+        dateFormatter.dateFormat = "HH:mm"
         dateFormatter.locale = Locale(identifier:"pt-BR")
         return dateFormatter.string(from: self)
     }

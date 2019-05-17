@@ -30,7 +30,6 @@ class HomeViewController: UIViewController {
     @objc func reloadTable(){
         self.tableView.reloadData()
     }
-
 }
 
 extension HomeViewController: UITableViewDataSource{
@@ -50,6 +49,7 @@ extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             homeViewModel?.selectedEvent = homeViewModel?.events[indexPath.row]
         performSegue(withIdentifier: "gotoEventDetails", sender: self)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 

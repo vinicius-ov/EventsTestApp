@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F2554E05228E2E670093C875 /* AttendeesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2554E04228E2E670093C875 /* AttendeesCollectionViewCell.swift */; };
 		F276044D228B37BC00232773 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276044C228B37BC00232773 /* AppDelegate.swift */; };
 		F276044F228B37BC00232773 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276044E228B37BC00232773 /* HomeViewController.swift */; };
 		F2760452228B37BC00232773 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2760450228B37BC00232773 /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F2554E04228E2E670093C875 /* AttendeesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeesCollectionViewCell.swift; sourceTree = "<group>"; };
 		F2760449228B37BC00232773 /* EventsTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventsTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F276044C228B37BC00232773 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F276044E228B37BC00232773 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 				F27604A5228CF7E700232773 /* DetailsViewController.swift */,
 				F27604AE228D1DF100232773 /* DetailsViewModel.swift */,
 				F27604AA228D140300232773 /* CheckinService.swift */,
+				F2554E04228E2E670093C875 /* AttendeesCollectionViewCell.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2554E05228E2E670093C875 /* AttendeesCollectionViewCell.swift in Sources */,
 				F2760487228B40A000232773 /* Event.swift in Sources */,
 				F276047D228B3AB800232773 /* CoordinatorProtocol.swift in Sources */,
 				F2760483228B3EBB00232773 /* HomeViewModel.swift in Sources */,

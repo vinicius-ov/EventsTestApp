@@ -21,4 +21,11 @@ class People: Codable {
         case name
         case pictureUrl = "picture"
     }
+    
+    init(id:String, eventId:String, name:String, pictureUrl:String? = ""){
+        self.id = id
+        self.eventId = eventId
+        self.name = name
+        self.pictureUrl = pictureUrl
+    }
 }

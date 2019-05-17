@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F2554E05228E2E670093C875 /* AttendeesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2554E04228E2E670093C875 /* AttendeesCollectionViewCell.swift */; };
+		F2554E07228E64500093C875 /* UIDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2554E06228E644F0093C875 /* UIDate+Extension.swift */; };
 		F276044D228B37BC00232773 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276044C228B37BC00232773 /* AppDelegate.swift */; };
 		F276044F228B37BC00232773 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276044E228B37BC00232773 /* HomeViewController.swift */; };
 		F2760452228B37BC00232773 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2760450228B37BC00232773 /* Main.storyboard */; };
@@ -57,6 +58,7 @@
 
 /* Begin PBXFileReference section */
 		F2554E04228E2E670093C875 /* AttendeesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeesCollectionViewCell.swift; sourceTree = "<group>"; };
+		F2554E06228E644F0093C875 /* UIDate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDate+Extension.swift"; sourceTree = "<group>"; };
 		F2760449228B37BC00232773 /* EventsTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventsTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F276044C228B37BC00232773 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F276044E228B37BC00232773 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				F276044C228B37BC00232773 /* AppDelegate.swift */,
+				F2554E06228E644F0093C875 /* UIDate+Extension.swift */,
 				F27604A2228CC3DD00232773 /* Model */,
 				F276048C228B53CD00232773 /* Service */,
 				F27604A7228CF81600232773 /* Details */,
@@ -443,6 +446,7 @@
 				F27604AD228D157400232773 /* CheckinRequest.swift in Sources */,
 				F276047B228B3A1800232773 /* RootViewController.swift in Sources */,
 				F2760489228B4A9000232773 /* ApiRequestDelegate.swift in Sources */,
+				F2554E07228E64500093C875 /* UIDate+Extension.swift in Sources */,
 				F27604A9228CFAB800232773 /* EventHomeTableViewCell.swift in Sources */,
 				F276048B228B4CA600232773 /* ApiRequest.swift in Sources */,
 				F2760485228B400200232773 /* EventsService.swift in Sources */,

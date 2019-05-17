@@ -34,10 +34,4 @@ class Event: Codable {
         case cupons
     }
     
-//    required init(from decoder: Decoder) throws {
-//        let values = try decoder.container(keyedBy: CodingKeys.self)
-//        latitude = try values.decode(Double.self, forKey: .latitude)
-//        longitude = try values.decode(Double.self, forKey: .longitude)
-//    }
-    
 }

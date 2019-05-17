@@ -15,6 +15,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var attendantsCollectionView: UICollectionView!
     @IBOutlet weak var eventTitleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var hourLabel: UILabel!
     @IBOutlet weak var descriptionText: UITextView!
     @IBOutlet weak var cuponsCollectionView: UICollectionView!
     @IBOutlet weak var attendeesCollectionView: UICollectionView!
@@ -38,6 +39,7 @@ class DetailsViewController: UIViewController {
         }
         let date = Date(timeIntervalSince1970: dateTimestamp / 1000.0)
         dateLabel.text = date.formattedDate()
+        hourLabel.text = date.formattedHour()
         descriptionText.text = event.description
         
     }
@@ -54,11 +56,14 @@ class DetailsViewController: UIViewController {
     }
     
     @IBAction func performCheckin(_ sender: Any) {
-        detailsViewModel?.sendCheckin(checkinRequest: CheckinRequest())
+        let userCheckinRequest = CheckinRequest(name: "Manolo", email: "manolo@manolo.com", eventId: event.id!)
+        let people = People(id: "20",eventId: "Manolo",name: "")
+        event.people?.append(people)
+        detailsViewModel?.sendCheckin(checkinRequest: userCheckinRequest)
     }
     
     @objc func reloadCollectionView(){
-        print("update collection view \(detailsViewModel?.response) \(detailsViewModel?.error)")
+        attendeesCollectionView.reloadData()
     }
 }
 

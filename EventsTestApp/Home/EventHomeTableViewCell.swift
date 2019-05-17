@@ -39,20 +39,4 @@ class EventHomeTableViewCell: UITableViewCell {
     }
     
 }
-//TODO: remove from here
-extension Date{
-    func formattedDate() -> String{
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM/yyyy, EEEE"
-        dateFormatter.locale = Locale(identifier:"pt-BR")
-        return dateFormatter.string(from: self)
-    }
-    
-    func formattedHour() -> String{
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "hh:mm"
-        dateFormatter.locale = Locale(identifier:"pt-BR")
-        return dateFormatter.string(from: self)
-    }
-    
-}
+

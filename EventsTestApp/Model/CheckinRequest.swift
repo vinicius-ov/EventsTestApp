@@ -20,11 +20,10 @@ class CheckinRequest: Codable {
         case email
     }
     
-    init() {
-        //TODO: all parameter constr
-        eventId = "1"
-        name = "ss"
-        email = "@"
+    init(name: String, email:String, eventId: String) {
+        self.eventId = eventId
+        self.name = name
+        self.email = email
     }
     
     func toDictionary() -> [String:Any]? {

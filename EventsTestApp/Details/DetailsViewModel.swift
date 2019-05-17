@@ -16,7 +16,7 @@ protocol DetailsViewModelProtocol: class {
 final class DetailsViewModel {
     
     var checkinService: CheckinServiceDelegate
-    var checkinRequest = CheckinRequest()
+    var checkinRequest: CheckinRequest?
     var error: String = ""
     var response: CheckinResponse?
     

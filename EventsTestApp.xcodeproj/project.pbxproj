@@ -25,10 +25,7 @@
 		F2760489228B4A9000232773 /* ApiRequestDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2760488228B4A9000232773 /* ApiRequestDelegate.swift */; };
 		F276048B228B4CA600232773 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276048A228B4CA600232773 /* ApiRequest.swift */; };
 		F276048E228B578800232773 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = F276048D228B578800232773 /* Cartfile */; };
-		F2760499228B5A2200232773 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2760492228B5A2100232773 /* RxRelay.framework */; };
-		F276049A228B5A2200232773 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2760493228B5A2100232773 /* RxCocoa.framework */; };
 		F276049B228B5A2200232773 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2760494228B5A2100232773 /* Alamofire.framework */; };
-		F276049C228B5A2200232773 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2760495228B5A2200232773 /* RxSwift.framework */; };
 		F276049D228B5A2200232773 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2760496228B5A2200232773 /* AlamofireImage.framework */; };
 		F27604A1228CC01B00232773 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27604A0228CC01A00232773 /* People.swift */; };
 		F27604A4228CC44700232773 /* Cupom.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27604A3228CC44700232773 /* Cupom.swift */; };
@@ -104,10 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2760499228B5A2200232773 /* RxRelay.framework in Frameworks */,
-				F276049A228B5A2200232773 /* RxCocoa.framework in Frameworks */,
 				F276049B228B5A2200232773 /* Alamofire.framework in Frameworks */,
-				F276049C228B5A2200232773 /* RxSwift.framework in Frameworks */,
 				F276049D228B5A2200232773 /* AlamofireImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,9 +388,6 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxRelay.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
@@ -404,9 +395,6 @@
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/AlamofireImage.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxRelay.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

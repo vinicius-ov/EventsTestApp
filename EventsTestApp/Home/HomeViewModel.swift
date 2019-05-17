@@ -8,21 +8,29 @@
 
 import UIKit
 
-protocol HomeNavigationDelegate: AnyObject {
-    func didTapBack()
-}
-
-protocol HomeViewModelDelegate: class {
+protocol HomeViewModelProtocol: class {
     var loading: Bool { get }
+    var events: [Event] { get }
 }
-    
+
 final class HomeViewModel {
-
-    private var eventsService: EventsServiceDelegate
-
+    
+    var eventsService: EventsServiceDelegate
+    var events: [Event] = []
+    var error: String = ""
+    var selectedEvent: Event?
     
     init(eventsService: EventsServiceDelegate = EventsService()) {
         self.eventsService = eventsService
+        eventsService.fetchEvents { result in
+            switch result{
+                case .success(let events):
+                    self.events = events
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadTable"), object: nil)
+                case .failure(let error):
+                    self.error = error.localizedDescription
+            }
+        }
     }
     
 }

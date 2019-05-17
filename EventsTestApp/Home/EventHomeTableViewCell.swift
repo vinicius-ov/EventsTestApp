@@ -25,7 +25,7 @@ class EventHomeTableViewCell: UITableViewCell {
             let date = Date(timeIntervalSince1970: dateTimestamp / 1000.0)
             eventDateLabel.text = date.formattedDate()
             hourLabel.text = date.formattedHour()
-            let placeholder = UIImage(named: "mentha-logo")
+            let placeholder = UIImage(named: "placeholder")
             eventImage.af_setImage(withURL: URL(string: event.imageUrl!)!, placeholderImage: placeholder)
         }
     }

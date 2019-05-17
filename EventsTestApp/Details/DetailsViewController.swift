@@ -18,6 +18,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var descriptionText: UITextView!
     @IBOutlet weak var cuponsCollectionView: UICollectionView!
     @IBOutlet weak var attendeesCollectionView: UICollectionView!
+    @IBOutlet weak var priceLabel: UILabel!
     
     var detailsViewModel: DetailsViewModel?
     var event: Event!
@@ -31,7 +32,7 @@ class DetailsViewController: UIViewController {
         detailsViewModel = DetailsViewModel.init(checkinService: CheckinService())
         NotificationCenter.default.addObserver(self, selector: #selector(self.reloadCollectionView), name: NSNotification.Name(rawValue: "updateAttendees"), object: nil)
         
-        let placeholder = UIImage(named: "mentha-logo")
+        let placeholder = UIImage(named: "placeholder")
         eventImage.af_setImage(withURL: URL(string: event.imageUrl!)!, placeholderImage: placeholder)
         eventTitleLabel.text = event.title
         guard let dateTimestamp = event.date else {
@@ -41,7 +42,7 @@ class DetailsViewController: UIViewController {
         dateLabel.text = date.formattedDate()
         hourLabel.text = date.formattedHour()
         descriptionText.text = event.description
-        
+        priceLabel.text = "R$ \(event.price!)"
     }
     
     override func viewWillLayoutSubviews() {
@@ -57,13 +58,21 @@ class DetailsViewController: UIViewController {
     
     @IBAction func performCheckin(_ sender: Any) {
         let userCheckinRequest = CheckinRequest(name: "Manolo", email: "manolo@manolo.com", eventId: event.id!)
-        let people = People(id: "20",eventId: "Manolo",name: "")
+        let people = People(id: "20",eventId: event.id!, name: "Manolo")
         event.people?.append(people)
         detailsViewModel?.sendCheckin(checkinRequest: userCheckinRequest)
+        showAlert()
     }
     
     @objc func reloadCollectionView(){
         attendeesCollectionView.reloadData()
+    }
+    
+    func showAlert(){
+        let alertController = UIAlertController(title: "Checkin", message: "Presença confirmada", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
     }
 }
 

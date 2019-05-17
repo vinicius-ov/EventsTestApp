@@ -15,8 +15,10 @@ class AttendeesCollectionViewCell: UICollectionViewCell {
     var attendee: People! {
         didSet {
             attendeeName.text = attendee.name
-            let placeholder = UIImage(named: "mentha-logo")
-            attendeePic.af_setImage(withURL: URL(string: attendee.pictureUrl!)!, placeholderImage: placeholder)
+            let placeholder = UIImage(named: "placeholder-person")
+            if let url = URL(string: attendee.pictureUrl ?? "") {
+                attendeePic.af_setImage(withURL: url, placeholderImage: placeholder)
+            }
             attendeePic.layer.cornerRadius = attendeePic.frame.size.width / 2
             attendeePic.clipsToBounds = true
         }

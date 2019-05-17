@@ -38,7 +38,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xZO-bd-gjA">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="xZO-bd-gjA">
                                                     <rect key="frame" x="17" y="13" width="333" height="200"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="200" id="Re6-3Q-zHv"/>
@@ -119,20 +119,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4BG-G3-8nd">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="4BG-G3-8nd">
                                 <rect key="frame" x="0.0" y="64" width="375" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="esu-eb-627"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sE8-Hp-CiM">
-                                <rect key="frame" x="0.0" y="268" width="375" height="20"/>
+                                <rect key="frame" x="0.0" y="268" width="375" height="2.5"/>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ew3-cU-kjt">
-                                <rect key="frame" x="141.5" y="294" width="92.5" height="17.5"/>
+                                <rect key="frame" x="141.5" y="276.5" width="92.5" height="17.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="data" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmd-Es-IOc">
                                         <rect key="frame" x="0.0" y="0.0" width="36.5" height="17.5"/>
@@ -155,7 +155,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="endereco" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sc5-5A-0YR">
-                                <rect key="frame" x="0.0" y="317.5" width="375" height="0.0"/>
+                                <rect key="frame" x="0.0" y="300" width="375" height="17.5"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -279,7 +279,7 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="130" height="110"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pVJ-Vq-0dg">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder-person" translatesAutoresizingMaskIntoConstraints="NO" id="pVJ-Vq-0dg">
                                                                     <rect key="frame" x="25" y="15" width="80" height="80"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="80" id="VAx-g1-CPQ"/>
@@ -400,4 +400,8 @@
             <point key="canvasLocation" x="-421" y="235"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="placeholder" width="50" height="50"/>
+        <image name="placeholder-person" width="50" height="50"/>
+    </resources>
 </document>

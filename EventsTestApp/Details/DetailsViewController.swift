@@ -10,9 +10,8 @@ import UIKit
 import AlamofireImage
 
 class DetailsViewController: UIViewController {
-
+    
     @IBOutlet weak var eventImage: UIImageView!
-    @IBOutlet weak var attendantsCollectionView: UICollectionView!
     @IBOutlet weak var eventTitleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var hourLabel: UILabel!
@@ -25,8 +24,9 @@ class DetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         attendeesCollectionView.dataSource = self
+        cuponsCollectionView.dataSource = self
         
         detailsViewModel = DetailsViewModel.init(checkinService: CheckinService())
         NotificationCenter.default.addObserver(self, selector: #selector(self.reloadCollectionView), name: NSNotification.Name(rawValue: "updateAttendees"), object: nil)
@@ -69,19 +69,26 @@ class DetailsViewController: UIViewController {
 
 extension DetailsViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "attendeeCell", for: indexPath) as! AttendeesCollectionViewCell
-        cell.attendee = event.people?[indexPath.row]
-        return cell
+        if collectionView == attendeesCollectionView {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "attendeeCell", for: indexPath) as! AttendeesCollectionViewCell
+            cell.attendee = event.people?[indexPath.row]
+            return cell
+        } else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cupomCell", for: indexPath) as! CuponsCollectionViewCell
+            cell.cupom = event.cupons![indexPath.row]
+            return cell
+        }
+        
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return event.people?.count ?? 0
+        if collectionView == attendeesCollectionView {
+            return event.people?.count ?? 0
+        }
+        return event.cupons?.count ?? 0
     }
-    func indexTitles(for collectionView: UICollectionView) -> [String]? {
-        return ["Participantes"]
-    }
-
+    
 }

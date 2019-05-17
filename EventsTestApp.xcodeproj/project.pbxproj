@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F2554E05228E2E670093C875 /* AttendeesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2554E04228E2E670093C875 /* AttendeesCollectionViewCell.swift */; };
 		F2554E07228E64500093C875 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2554E06228E644F0093C875 /* Date+Extension.swift */; };
+		F2554E09228E6B550093C875 /* CuponsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2554E08228E6B550093C875 /* CuponsCollectionViewCell.swift */; };
 		F276044D228B37BC00232773 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276044C228B37BC00232773 /* AppDelegate.swift */; };
 		F276044F228B37BC00232773 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276044E228B37BC00232773 /* HomeViewController.swift */; };
 		F2760452228B37BC00232773 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2760450228B37BC00232773 /* Main.storyboard */; };
@@ -59,6 +60,7 @@
 /* Begin PBXFileReference section */
 		F2554E04228E2E670093C875 /* AttendeesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeesCollectionViewCell.swift; sourceTree = "<group>"; };
 		F2554E06228E644F0093C875 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		F2554E08228E6B550093C875 /* CuponsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuponsCollectionViewCell.swift; sourceTree = "<group>"; };
 		F2760449228B37BC00232773 /* EventsTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventsTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F276044C228B37BC00232773 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F276044E228B37BC00232773 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				F27604A5228CF7E700232773 /* DetailsViewController.swift */,
+				F2554E08228E6B550093C875 /* CuponsCollectionViewCell.swift */,
 				F27604AE228D1DF100232773 /* DetailsViewModel.swift */,
 				F27604AA228D140300232773 /* CheckinService.swift */,
 				F2554E04228E2E670093C875 /* AttendeesCollectionViewCell.swift */,
@@ -434,6 +437,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2554E09228E6B550093C875 /* CuponsCollectionViewCell.swift in Sources */,
 				F2554E05228E2E670093C875 /* AttendeesCollectionViewCell.swift in Sources */,
 				F2760487228B40A000232773 /* Event.swift in Sources */,
 				F276047D228B3AB800232773 /* CoordinatorProtocol.swift in Sources */,
